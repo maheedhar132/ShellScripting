@@ -14,14 +14,14 @@ f=( default 4 2 1 3 )
 sudo cat  > result.txt
 
 #check files name wise
-for i in {0..$nf..1}
+for i in "${a[@]}"
  do 
  for j in {0..4..1}
-  do 
-   FILE=/home/ec2-user/${f[$j]}/${a[$i]}
-   if test -f "$FILE"; then
-      echo "$a[$i]	::	$FILE" >> result.txt
-      break
-   fi
+   do 
+    FILE=/home/ec2-user/${f[$j]}/${a[$i]}
+    if test -f "$FILE"; then
+       echo "$a[$i]	::	$FILE" >> result.txt
+       break
+    fi
    done
- done	 
+done	 
