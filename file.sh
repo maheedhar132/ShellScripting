@@ -21,6 +21,8 @@ while [ $i -lt $nf ]
     if test -f "$file" ; then
      echo "${a[$i]} :: $file" >> result.txt
      break
+    fi
+    $j = 'expr $j+1'
    done
  $i = 'expr $i+1'
 done  
