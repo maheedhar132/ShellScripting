@@ -7,3 +7,4 @@ for i in {0..4..1}
 if test -f "$FILE"; then
     echo "$FILE exist"
 fi
+done
