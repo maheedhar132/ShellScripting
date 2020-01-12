@@ -15,11 +15,13 @@ sudo cat  > result.txt
 j=4
 for i in 'seq 0 $nf'
 do 
+
 	for j in 'seq 0 $j'
       	do
 	 file=/home/ec2-user/${a[$i]}
 	 if [[ -f "$file" ]] ; then
-	 echo "$f[$j] :: $file" >> result.txt
+	 echo "${f[$j]} :: $file" >> result.txt
+	fi
 	done
 done
 	 
