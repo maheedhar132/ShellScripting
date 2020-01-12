@@ -9,7 +9,8 @@ read -e line
 for index in $line;do
         ${a[index]}
 done
-
+k=1
+echo "$a[$k]"
 #folder array
 f=( default 4 2 1 3 )
 
@@ -25,7 +26,7 @@ for i in "${a[@]}"
    a2=a[$i] 
     FILE=/home/ec2-user/$a1/$a2
     if test -f "$FILE"; then
-       echo "$a[$i]	::	$FILE" >> result.txt
+       echo "a[$i]	::	$FILE" >> result.txt
        break
     fi
    done
