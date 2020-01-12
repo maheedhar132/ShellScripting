@@ -2,7 +2,10 @@
 read -p "Enter total number of files: " nf
 
 #Getting the file names
-read -a a
+while IFS= read -r line; do
+    [[ $line = done ]] && break
+    a+=("$line")
+done
 
 
 
