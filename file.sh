@@ -2,13 +2,18 @@
 read -p "Enter total number of files: " nf
 
 #Getting the file names
-echo -n "Enter the elements: "
-
-read -e line
-
-for index in $line;do
-        ${a[index]}
+i=0
+while [ $i -lt $nf ] 
+do
+    # To input from user 
+    read a[$i] 
+  
+    # Increment the i = i + 1 
+    i=`expr $i + 1` 
 done
+
+
+
 #folder array
 f=( default 4 2 1 3 )
 
