@@ -2,7 +2,13 @@
 read -p "Enter total number of files: " nf
 
 #Getting the file names
+echo -n "Enter the elements: "
 
+read -e line
+
+for index in $line;do
+        ${a[index]}
+done
 
 #folder array
 f=( default 4 2 1 3 )
