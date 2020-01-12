@@ -2,7 +2,10 @@
 read -p "Enter total number of files: " nf
 
 #Getting the file names
-read -p  "Enter $nf file names seperated by space: [enter return only after you have given all file names] " -a a
+while read line
+do
+    a=("${a[@]}" $line)
+done
 
 #folder array
 f=( default 4 2 1 3 )
