@@ -1,9 +1,9 @@
 nf=4
-a=( default 4 2 1 3 )
-f=( text.txt text1.txt a.txt)
-for i in {0..$nf..1}
+f=( default 4 2 1 3 )
+a=( text.txt text1.txt a.txt)
+for i in "${a[@]}"
  do 
- for j in {0..3..1}
+ for j in "${f[@]}"
  do
 	 FILE=/home/ec2-user/${a[$i]}/${f[$j]}
  	 if test -f "$FILE"; then
