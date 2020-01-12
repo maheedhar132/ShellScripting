@@ -2,10 +2,7 @@
 read -p "Enter total number of files: " nf
 
 #Getting the file names
-while read line
-do
-    a=("${a[@]}" $line)
-done
+
 
 #folder array
 f=( default 4 2 1 3 )
@@ -18,7 +15,7 @@ for i in "${a[@]}"
  do 
  for j in "${f[@]}"
    do 
-    FILE=/home/ec2-user/${f[$j]}/${a[$i]}
+    FILE=/home/ec2-user/{f[$j]}/${a[$i]}
     if test -f "$FILE"; then
        echo "$a[$i]	::	$FILE" >> result.txt
        break
