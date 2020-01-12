@@ -11,18 +11,15 @@ f=( default 4 2 1 3 )
 sudo cat  > result.txt
 
 #check files name wise
-i=0
-j=0
-while [[ $i -lt $nf ]]
-  do 
-  while [[ $j -lt 5 ]]
-    do 
-    file=/home/ec2-user/${f[$j]}/${a[$nf]}
-    if test -f "$file" ; then
-     echo "${a[$i]} :: $file" >> result.txt
-     break
-    fi
-    $j='expr $j+1'
-   done
- $i='expr $i+1'
-done  
+
+j=4
+for i in 'seq 0 $nf'
+do 
+	for j in 'seq 0 $j'
+      	do
+	 file=/home/ec2-user/${a[$i]}
+	 if [[ -f "$file" ]] ; then
+	 echo "$f[$j] :: $file" >> result.txt
+	done
+done
+	 
