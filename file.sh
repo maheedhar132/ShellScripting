@@ -2,14 +2,9 @@
 read -p "Enter total number of files: " nf
 
 #Getting the file names
-i=0
-while [ $i -lt $nf ] 
-do
-    # To input from user 
-    read a[$i] 
-  
-    # Increment the i = i + 1 
-    i=`expr $i + 1` 
+for ((i=0;i<nf;i++))
+do 
+ read a[$i]
 done
 
 
