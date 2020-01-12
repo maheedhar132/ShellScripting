@@ -16,7 +16,7 @@ sudo cat  > result.txt
 #check files name wise
 for i in "${a[@]}"
  do 
- for j in {0..4..1}
+ for j in "${f[@]}"
    do 
     FILE=/home/ec2-user/${f[$j]}/${a[$i]}
     if test -f "$FILE"; then
