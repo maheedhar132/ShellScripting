@@ -2,10 +2,7 @@
 read -p "Enter total number of files: " nf
 
 #Getting the file names
-while read line
-do
-    a=("${a[@]}" $line)
-done
+read -a a
 
 
 
