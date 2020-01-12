@@ -22,9 +22,8 @@ for i in "${a[@]}"
  do 
  for j in "${f[@]}"
    do
-   a1=f[$j]
-   a2=a[$i] 
-    FILE=/home/ec2-user/$a1/$a2
+   
+    FILE=/home/ec2-user/${f[$j]}/$i
     if test -f "$FILE"; then
        echo "a[$i]	::	$FILE" >> result.txt
        break
