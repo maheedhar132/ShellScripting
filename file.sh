@@ -20,8 +20,10 @@ sudo cat  > result.txt
 for i in "${a[@]}"
  do 
  for j in "${f[@]}"
-   do 
-    FILE=/home/ec2-user/{f[$j]}/{a[$i]}
+   do
+   a1=f[$j]
+   a2=a[$i] 
+    FILE=/home/ec2-user/$a1/$a2
     if test -f "$FILE"; then
        echo "$a[$i]	::	$FILE" >> result.txt
        break
