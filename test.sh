@@ -5,7 +5,7 @@ for i in "${a[@]}"
  do 
  for j in "${f[@]}"
  do
-	 FILE=/home/ec2-user/${a[$i]}/${f[$j]}
+	 FILE=/home/ec2-user/${f[$j]}/a{a[$i]}
  	 if test -f "$FILE"; then
 	 echo "$FILE exist"
 	 break
