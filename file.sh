@@ -13,16 +13,16 @@ sudo cat  > result.txt
 #check files name wise
 i=0
 j=0
-while [ $i -lt $nf ]
+while [[ $i -lt $nf ]]
   do 
-  while [ $j -lt 5 ]
+  while [[ $j -lt 5 ]]
     do 
     file=/home/ec2-user/${f[$j]}/${a[$nf]}
     if test -f "$file" ; then
      echo "${a[$i]} :: $file" >> result.txt
      break
     fi
-    $j = 'expr $j+1'
+    $j='expr $j+1'
    done
- $i = 'expr $i+1'
+ $i='expr $i+1'
 done  
