@@ -2,9 +2,10 @@
 read -p "Enter total number of files: " nf
 
 #Getting the file names
-for ((i=0;i<nf;i++))
-do 
- read a[$i]
+i=0
+while [ $i -lt $nf ]; do
+	echo "$i: ${a[$i]}"
+	let i++
 done
 
 
