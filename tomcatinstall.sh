@@ -4,7 +4,7 @@
 #installing java
 sudo yum install java
 #downloading tomcat
-wget http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50-windows-x64.zip
+wget http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz
 #unzipping tar file 
 tar -xvzf apache-tomcat-8.5.49.tar.gz
 #remove tomcat downloaded tar file
