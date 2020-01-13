@@ -39,6 +39,7 @@ a=( a.txt b.txt c.txt d.txt e.txt f.txt g.txt h.txt )
 f=( default 4 2 1 3 )
 
 # Display the files
+echo "These are the files present"
 for i in "${a[@]}"
  do 
   echo "$i "
