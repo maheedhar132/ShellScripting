@@ -4,9 +4,9 @@
 home=/home/ec2-user
 #Creating Default Folder
 mkdir default
-sudo $home/default/touch a.txt
-sudo $home/default/touch c.txt
-sudo $home/default/touch e.txt
+sudo touch $home/default/a.txt
+sudo touch $home/default/c.txt
+sudo touch $home/default/e.txt
 
 # Creating folder 1
 mkdir 1
@@ -55,7 +55,7 @@ for i in "${a[@]}"
  for j in "${f[@]}"
    do
    
-    FILE=$home/$j/$i
+    FILE=$home/${f[$j]}/$i
     if test -f "$FILE"; then
        echo "$i	::	$FILE" >> result.txt
        break
