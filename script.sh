@@ -55,7 +55,7 @@ for i in "${a[@]}"
  for j in "${f[@]}"
    do
    
-    FILE=/home/ec2-user/${f[$j]}/$i
+    FILE=$home/$j/$i
     if test -f "$FILE"; then
        echo "$i	::	$FILE" >> result.txt
        break
