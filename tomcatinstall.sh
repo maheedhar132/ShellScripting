@@ -32,7 +32,7 @@ sed -i 's\:1" />\:1" /> -->\g' apache-tomcat-8.5.50/webapps/manager/META-INF/con
 apache-tomcat-8.5.50/bin/./startup.sh
 
 #Bootstrapping tomcat 
-#sudo su
+sudo su
 sudo touch /etc/init.d/tomcat8.sh
 
 sudo echo "PATH=/sbin:/bin:/usr/sbin:/usr/bin" >> /etc/init.d/tomcat8.sh
@@ -54,3 +54,4 @@ sudo echo "esac" >> /etc/init.d/tomcat8.sh
 
 
 sudo chmod +x /etc/init.d/tomcat8.sh
+exit
