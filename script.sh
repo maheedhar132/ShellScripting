@@ -3,7 +3,7 @@
 #default home directory 
 home=/home/ec2-user
 #Creating Default Folder
-mkdir default.txt
+mkdir default
 sudo $home/default/touch a.txt
 sudo $home/default/touch c.txt
 sudo $home/default/touch e.txt
