@@ -2,6 +2,7 @@
 read -p "Enter total number of files: " nf
 
 #Getting the file names
+echo "Enter filenames line by line and type done when you have completed "
 while IFS= read -r line; do
     [[ $line = done ]] && break
     a+=("$line")
@@ -27,4 +28,5 @@ for i in "${a[@]}"
        break
     fi
    done
-done	 
+done	
+echo "results stored in result.txt in file :: filepath format" 
