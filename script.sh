@@ -45,7 +45,10 @@ for i in "${a[@]}"
   echo "$i "
  done
 
+#Remove the older rexult file and creating a new one
+rm -rf rexult.txt
 
+sudo touch rexult.txt
 
 
 
