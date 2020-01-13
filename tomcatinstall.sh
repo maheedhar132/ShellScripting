@@ -161,6 +161,6 @@ EOF
 
 
 
-sudo chmod +x tomcat
+sudo chmod +x /etc/init.d/tomcat
 
 sudo update-rc.d tomcat defaults
