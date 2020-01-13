@@ -32,24 +32,25 @@ sed -i 's\:1" />\:1" /> -->\g' apache-tomcat-8.5.50/webapps/manager/META-INF/con
 apache-tomcat-8.5.50/bin/./startup.sh
 
 #Bootstrapping tomcat 
+#sudo su
 sudo touch /etc/init.d/tomcat8.sh
 
-echo "PATH=/sbin:/bin:/usr/sbin:/usr/bin" >> /etc/init.d/tomcat8.sh
+sudo echo "PATH=/sbin:/bin:/usr/sbin:/usr/bin" >> /etc/init.d/tomcat8.sh
 
-echo "start() {" >> /etc/init.d/tomcat8.sh
-echo " sh /usr/share/tomcat7/bin/startup.sh" >> /etc/init.d/tomcat8.sh
-echo "}" >> /etc/init.d/tomcat8.sh
+sudo echo "start() {" >> /etc/init.d/tomcat8.sh
+sudo echo " sh /usr/share/tomcat7/bin/startup.sh" >> /etc/init.d/tomcat8.sh
+sudo echo "}" >> /etc/init.d/tomcat8.sh
 
-echo "stop() {" >> /etc/init.d/tomcat8.sh
-echo " sh /usr/share/tomcat7/bin/shutdown.sh" >> /etc/init.d/tomcat8.sh
+sudo echo "stop() {" >> /etc/init.d/tomcat8.sh
+sudo echo " sh /usr/share/tomcat7/bin/shutdown.sh" >> /etc/init.d/tomcat8.sh
 
-echo "}" >>/etc/init.d/tomcat8.sh
+sudo echo "}" >>/etc/init.d/tomcat8.sh
 
-echo "case $1 in" >> /etc/init.d/tomcat8.sh
-echo "  start|stop) $1;;" >> /etc/init.d/tomcat8.sh
-echo "  restart) stop; start;;" >> /etc/init.d/tomcat8.sh
-echo "  *) echo "Run as $0 <start|stop|restart>"; exit 1;;" >> /etc/init.d/tomcat8.sh
-echo "esac" >> /etc/init.d/tomcat8.sh
+sudo echo "case $1 in" >> /etc/init.d/tomcat8.sh
+sudo echo "  start|stop) $1;;" >> /etc/init.d/tomcat8.sh
+sudo echo "  restart) stop; start;;" >> /etc/init.d/tomcat8.sh
+sudo echo "  *) echo "Run as $0 <start|stop|restart>"; exit 1;;" >> /etc/init.d/tomcat8.sh
+sudo echo "esac" >> /etc/init.d/tomcat8.sh
 
 
 sudo chmod +x /etc/init.d/tomcat8.sh
