@@ -33,8 +33,8 @@ apache-tomcat-8.5.50/bin/./startup.sh
 
 #Bootstrapping tomcat 
 sudo touch /etc/init.d/tomcat
-sudo su 
-cat > /etc/init.d/tomcat << EOF
+#sudo su 
+sudo cat > /etc/init.d/tomcat << EOF
 export JAVA_HOME=/usr/java/latest
  
 #Add Java binary files to PATH
