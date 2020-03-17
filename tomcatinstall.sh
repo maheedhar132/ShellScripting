@@ -2,7 +2,7 @@
 
 #Go to the folder in which you want to install tomcat
 #installing java
-sudo apt install java
+#sudo apt install java
 #downloading tomcat
 cd /home/ubuntu && sudo wget http://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz
 #unzipping tar file 
